@@ -1,0 +1,222 @@
+// // .all-browsers {
+// //   margin: 0;
+// //   padding: 5px;
+// //   background-color: lightgray;
+// // }
+
+// // .all-browsers > h1, .browser {
+// //   margin: 10px;
+// //   padding: 5px;
+// // }
+
+// // .browser {
+// //   background: white;
+// //   text-align: left;
+// // }
+
+// // .browser > h2, p {
+// //   margin: 4px;
+// //   font-size: 90%;
+// // }
+
+// // footer {
+// //   text-align: center;
+// //   padding: 3px;
+// //   background-color: DarkSalmon;
+// //   color: white;
+// // }
+// * {margin: 0;padding: 0;}
+// body { font-family: arial; font-size: 16px;}
+
+// .clearfix {clear: both;}
+// .center {text-align: center;}
+// .left {text-align: left;}
+// .right {text-align: right;}
+
+// .clr1 {background-color: white;}
+// .clr2 {background: #F1F3F5; color: #8F94A3;}
+// .clr3 {background: #3E4352; color: #BDC3CF;}
+// .clr4 {background: #636A7D; color: #E3E7F2;}
+// .clr5 {background-color: #F1F3F5;}
+// .clr6 {background-color: #39B5A1;}
+// .clr7 {background-color: #D45245;}
+
+// a {color: #BDC3CF; text-decoration: none;}
+// a:hover {color: #ffffff; text-decoration: underline;}
+
+
+// /*##### Footer Structure #####*/
+// .bo-wrap {clear:both; width: auto;}
+// .bo-footer {
+//   clear:both;
+//   width: auto;
+//   padding: 5px;
+//   width: 960px;
+// 	margin: 0 auto;
+// }
+
+// .bo-footer-social {text-align: center; line-height: 1px;}
+
+// .bo-footer-smap {
+// 	width: 300px;
+// 	float: left;
+// 	padding: 5px 10px;
+//   text-align: left;
+//   font-size: 18px;
+// }
+
+// .bo-footer-uonline {
+// 	width: 300px; /* Account for margins + border values */
+// 	float: left;
+// 	padding: 5px 10px;
+//   text-align: center;
+// }
+
+// .bo-footer-power {
+// 	width: 300px;
+// 	padding: 5px 10px;
+// 	float: left;
+//   text-align: right;
+//   font-size: 14px;
+//   color: #636A7D;
+//   vertical-align: middle;
+// }
+
+// .bo-footer-copyright {text-align: center; color: #BDC3CF}
+
+// /*##### Footer Responsive #####*/
+// /* for 980px or less */
+// @media screen and (max-width: 980px) {
+
+// 	.bo-footer {
+// 		width: 95%;
+// 		padding: 1% 2%;
+// 	}
+// 	.bo-footer-smap {
+// 		width: 46%;
+// 		padding: 1% 2%;
+// 	}
+// 	.bo-footer-uonline {
+// 		width: 46%;
+// 		padding: 1% 2%;
+// 		float: right;
+//     text-align: right;
+// 	}
+
+// 	.bo-footer-power {
+// 		clear: both;
+// 		padding: 1% 2%;
+// 		width: auto;
+// 		float: none;
+//     text-align: center;
+// 	}
+// }
+// /* for 700px or less */
+// @media screen and (max-width: 600px) {
+
+// 	.bo-footer-smap {
+// 		width: auto;
+// 		float: none;
+//     text-align: center;
+// 	}
+
+// 	.bo-footer-uonline {
+// 		width: auto;
+// 		float: none;
+//     text-align: center;
+// 	}
+
+// 	.bo-footer-power {
+// 		width: auto;
+// 		float: none;
+//     text-align: center;
+// 	}
+
+// }
+
+// /* for 480px or less */
+// @media screen and (max-width: 480px) {
+
+// }
+.clearfix {clear: both;}
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}
+
+
+.clr3 {background:green; color:white;}
+.clr4 {background:white; color: red;}
+
+
+a {color: #BDC3CF; text-decoration: none;}
+a:hover {color: #ffffff; text-decoration: underline;}
+
+
+/*##### Footer Structure #####*/
+.bo-wrap {clear:both; width: auto;}
+.bo-footer {
+  // clear:both;
+  width: auto;
+  // padding: 5px;
+  width: 960px;
+	margin: 0 auto;
+}
+
+.bo-footer-social {text-align: center; line-height: 1px;}
+
+.bo-footer-smap {
+	width: 300px;
+	float: left;
+	padding: 5px 10px;
+  text-align: left;
+  font-size: 18px;
+}
+.bo-footer-power {
+	width: 300px;
+	padding: 5px 10px;
+	float: left;
+  text-align: right;
+  font-size: 14px;
+  color: white;
+  vertical-align: middle;
+}
+
+.bo-footer-copyright {text-align: center; color: black}
+@media screen and (max-width: 980px) {
+
+	.bo-footer {
+		width: 95%;
+		padding: 1% 2%;
+	}
+	.bo-footer-smap {
+		width: 46%;
+		padding: 1% 2%;
+	}
+	.bo-footer-power {
+		clear: both;
+		padding: 1% 2%;
+		width: auto;
+		float: none;
+    text-align: center;
+	}
+}
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	.bo-footer-smap {
+		width: auto;
+		float: none;
+    text-align: center;
+	}
+	.bo-footer-power {
+		width: auto;
+		float: none;
+    text-align: center;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+}

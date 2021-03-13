@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>fibonacci</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Số fibonacci</h1>
+    <div style="text-align: center;">
+        <script>
+            let n =parseInt(prompt("nhap n:"));
+            let f=[];
+            if (n > 0){
+                for (let i=0;i<n ;i++){
+                    if (i == 1||i == 0){
+                        f.push(1);
+                    }
+                    else{
+                        f.push(f[i-2]+f[i-1]);
+                    }
+                }
+                document.write("Số cần tìm là:"+f);
+            }
+            else{
+                document.write("N phải là số và phải lớn hơn 0");
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

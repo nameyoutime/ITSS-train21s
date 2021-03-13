@@ -1,0 +1,43 @@
+#logo {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding-left: 10%;
+    
+
+}
+#login-or{
+    text-align: start;
+    width: auto;
+    margin-left: 30%;
+    margin-top: 7%;
+}
+#checkbox{
+    text-align: start;
+    width: 13cm;
+    margin-left: 30%;
+    margin-top: 1%;
+    border: black;
+    border-style: solid;
+    padding: 1mm;
+
+}
+.input-box{
+    width: 13.3cm;
+    height: 3%;
+}
+#signin{
+    text-align: start;
+    margin-left: 30%;
+    width: auto;
+    height: auto;
+    display : flex;
+}
+.center{
+    text-align: center;
+    width: 13cm;
+    margin-left: 30%;
+}
+.removeUnderLine{
+    color: black;text-decoration: none;
+  }

@@ -1,0 +1,223 @@
+.background{
+  width: 100vw;
+  height:80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  background-image: url("../../../assets/background3.png");
+  background-repeat: repeat-x;
+  background-size: 73rem;
+  width: 100%;
+  height: 85%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  background-image: url("../../../assets/road.png");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 15%;
+}
+
+.Character {
+  position: relative;
+  margin: 30px 0 0 0;
+  width: 15%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contain {
+  position: relative;
+  text-align: center;
+  height: 90px;
+  width: 90px;
+}
+
+.contain-bird {
+  background-image: url("../../../assets/border.png");
+  height: 90px;
+  width: 90px;
+}
+
+.bird-charac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bird{
+  position: absolute; 
+  margin: 35px 0 0 -60px;
+}
+
+button{
+  background-size: 60px 30px;
+  background-color:transparent;
+  height: 30px;
+  width: 60px;
+  background-repeat: no-repeat;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.button1{
+  background-image: url("../../../assets/up.png");
+}
+
+.button1:disabled{
+  background-image: url("../../../assets/up_disabled.png");
+}
+
+.button1:hover {
+  background-image: url("../../../assets/up_hover.png");
+}
+
+.button2{
+  background-image: url("../../../assets/down.png");
+}
+
+.button2:disabled{
+  background-image: url("../../../assets/down_disabled.png");
+}
+
+.button2:hover {
+  background-image: url("../../../assets/down_hover.png");
+}
+
+@media only screen and (max-width: 1050px) {
+  .Title{
+      width: 35rem;
+  }
+  .background{
+      height:90vh;
+  }
+
+  .back{
+      background-size: 132rem;
+      .Character{
+        width: 25%;
+          img{
+              width: 35%;
+          }
+      }
+  }
+  .base{
+      background-size: 250rem;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .Title{
+      width: 22rem;
+  }
+  .background{
+      height:85vh;
+  }
+
+  .back{
+      background-size:125rem;
+  }
+  .base{
+      background-size:180rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Title{
+      width: 30rem;
+  }
+  .background{
+      height: 79vh;
+  }
+  .back{
+      height: 100%;
+      background-size: 90rem;
+
+  }
+  .base{
+      background-size: 144rem;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  .Title{
+      width: 20rem;
+  }
+  .bird{
+    width: 100px;
+  }
+  .background{
+      height:75vh;
+  }
+  .back{
+      background-size: 59rem;
+  }
+  .base{
+      background-size: 74rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Title{
+      width: 17rem;
+  }
+  .background{
+      height:75vh;
+  }
+  .back{
+      background-size: 60rem;
+      .Character{
+        width: 55%;
+      }
+  }
+  .base{
+      background-size: 74rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .Title{
+      width: 13rem;
+  }
+  .background{
+      height:69vh;
+  }
+  .back{
+      background-size: 64rem;
+      .Character{
+        width: 55%;
+      }
+  }
+  .base{
+      background-size: 74rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .background{
+      height:70vh;
+  }
+  .back{
+      background-size: 53rem;
+      .Character{
+        width: 55%;
+      }
+  }
+  .base{
+      background-size: 74rem;
+  }
+}

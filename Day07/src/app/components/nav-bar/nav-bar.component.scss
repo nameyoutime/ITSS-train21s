@@ -1,0 +1,41 @@
+.test{
+    border: dashed black;
+}
+
+.borderNull{
+    border: dashed black;
+}
+#searchBar{
+    height: 20%;
+    margin-top: 30px;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+#shopName{
+    margin-left: 1%;
+}
+
+#SearchText{
+    margin-left: 30%;
+}
+#img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: solid black;
+    margin-left: 70%;
+    margin-right: 5%;
+    background-color: white;
+    margin-top: 0.5%;
+}
+.borderCart{
+    width: 100%;
+}
+
+#navBar{
+    width: 99vw;height: 80px;
+    background-color: orange;
+    box-shadow: 5px 5px rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    flex-direction: row;
+}

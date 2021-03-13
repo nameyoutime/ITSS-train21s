@@ -1,0 +1,25 @@
+<nav>
+  <div class="logo">
+    <h1 class="text" [routerLink]="''">Shop</h1>
+  </div>
+  <ul class="nav-links">
+
+    <li><a class="text" href="#" [routerLink]="'shop'">
+        <h1>Shopping</h1>
+      </a></li>
+  </ul>
+
+  <img id="cart" src="../../../assets/shoppinh_cart.png" [routerLink]="'cart'">
+  <div style="text-align: center;height: 50%;">
+
+      <img style="width: 50px;border-radius: 100%;" src="{{user.photoURL}}">
+
+
+
+    <div>
+
+      <button class="button" (click)="inOut.login()">Log in</button>
+      <button class="button" (click)="inOut.logout()">Log out</button>
+    </div>
+  </div>
+</nav>

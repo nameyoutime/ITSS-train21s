@@ -1,0 +1,18 @@
+<div class="test-border">
+    <img class="img" src="{{item.picture}}">
+    <h1>{{item.name}}</h1>
+    <h1>Giá:{{item.price}}k/kg</h1>
+    <div *ngIf="item.outOfStock">
+        <h1>Hết hàng</h1>
+    </div>
+    <div *ngIf="!item.outOfStock">
+        <h1>Còn hàng</h1>
+        <app-counter></app-counter> <button class="button">
+            <h3>Mua ngay</h3>
+        </button>
+    </div>
+    <!-- <h1>out of stock</h1> -->
+
+
+
+</div>

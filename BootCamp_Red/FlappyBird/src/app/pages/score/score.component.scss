@@ -1,0 +1,16 @@
+.background {
+  border: solid black;
+  text-align: center;
+  margin-left: 40%;
+  width: 20%;
+  border-radius: 25px;
+  height: 100px;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.card {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  box-shadow: 4px 4px rgba($color: #000000, $alpha: 0.2);
+}

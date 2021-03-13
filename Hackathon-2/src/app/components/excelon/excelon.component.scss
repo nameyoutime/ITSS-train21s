@@ -1,0 +1,55 @@
+table
+{
+    width:1000px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0);
+
+}
+
+th,td
+{
+    position:relative;
+    text-align:center;
+    color:rgba(0,0,0,0.7);
+    cursor:default;
+    border: solid #c5cae9 1px;
+}
+
+th
+{
+    background-color: tan;
+    width: 20px;
+}
+
+
+tbody th
+{
+    text-align: center;
+    white-space:nowrap;
+    
+}
+
+td
+{
+    background-color:rgba(0, 255, 255, 0);
+    text-align: center;
+    
+}
+
+
+tbody>tr:hover th,tbody>tr:hover td
+{
+    background:rgba(255,255,255,0.2);
+}
+
+
+
+input
+{
+    width: 100%;
+    box-sizing: border-box;
+    border-top-style: hidden;
+    border-right-style: hidden; 
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}

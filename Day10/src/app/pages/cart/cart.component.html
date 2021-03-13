@@ -1,0 +1,20 @@
+<div class="body">
+    <div class="colum-test">
+        <app-cart-item *ngFor="let item of Cart.cartitems" [cartItem]="item"></app-cart-item>
+
+    </div>
+    <div id="Total">
+
+        <h2 style="text-align: center;">Tổng giá: {{Cart.grandTotal *1000}}đ</h2>
+        <button (click)="Cart.clear()">
+            <h2>Xóa</h2>
+        </button>
+        <button (click)="Cart.clearAll()">
+            <h2>Xóa hết</h2>
+        </button>
+
+
+    </div>
+
+
+</div>

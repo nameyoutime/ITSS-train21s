@@ -1,0 +1,20 @@
+.div{
+    flex: 2 2 10%;
+    margin: 10px;
+    background-color: rgb(255, 207, 117);
+    width: 15vw;
+    height: 96%;
+    border-radius: 25px;
+    box-shadow: 4px 4px rgba($color: #000000, $alpha: 0.2);
+    padding: 1%;
+    margin-top: 1%;
+    text-align: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border: solid black;
+    border-radius: 25px;
+    box-shadow: 4px 4px rgba($color: #000000, $alpha: 0.2);
+}

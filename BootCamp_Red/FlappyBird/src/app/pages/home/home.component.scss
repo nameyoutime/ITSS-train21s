@@ -1,0 +1,146 @@
+.background{
+    width: 100vw;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+}
+.back{
+    background-image: url("../../../assets/background3.png");
+    background-repeat: repeat-x;
+    background-size: 73rem;
+    width: 100%;
+    height:90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.base{
+    background-image: url("../../../assets/road.png");
+    background-repeat: repeat-x;
+    width: 100%;
+    height:15%;
+}
+
+.Character {
+    margin: 0 0 50px 0 ;
+    width: 35%;
+    align-items: center;
+    text-align: center;
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    img{
+        width: 35rem;
+    }
+    .background{
+        height:90vh;
+    }
+
+    .back{
+        background-size: 132rem;
+        .Character{
+            img{
+                width: 25%;
+            }
+        }
+    }
+    .base{
+        background-size: 250rem;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    img{
+        width: 22rem;
+    }
+    .background{
+        height:80vh;
+    }
+
+    .back{
+        background-size: 56rem;
+
+        .Character{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .base{
+        background-size:75rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    img{
+        width: 30rem;
+    }
+    .background{
+        height: 80vh;
+    }
+    .back{
+        height: 100%;
+        background-size: 90rem;
+
+    }
+    .base{
+        background-size: 144rem;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    img{
+        width: 20rem;
+    }
+    .background{
+        height:75vh;
+    }
+    .back{
+        background-size: 59rem;
+    }
+    .base{
+        background-size: 74rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    img{
+        width: 17rem;
+    }
+    .background{
+        height:75vh;
+    }
+    .back{
+        background-size: 60rem;
+    }
+    .base{
+        background-size: 74rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    img{
+        width: 10rem;
+    }
+    .background{
+        height:72vh;
+    }
+    .back{
+        background-size: 50rem;
+    }
+    .base{
+        background-size: 74rem;
+    }
+}
+
+
+

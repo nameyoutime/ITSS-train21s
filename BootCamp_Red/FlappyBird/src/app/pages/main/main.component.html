@@ -1,0 +1,37 @@
+<!-- <div class="background" style="overflow: hidden;">
+  <div class="back">
+      <img class="Title" src="../../../assets/flappy-bird.png" width="350px" style="margin-top: 10%;">
+      <div class="Character" >
+          <div [@animImageSlider]="counter">
+              <ng-container *ngFor="let img of images; let i=index">
+                  <img [src]="img" style="margin-left: 25%;margin-top: 5%; border: solid;" *ngIf="i===counter" />
+              </ng-container>
+          </div>
+          <button class="button" type="button" (click)="onPrevious()" [disabled]="counter===0">Previous</button>
+          <button routerLink="/game" class="playbutton" style="background-color:rgba(0,136,148,25);margin-left: 5%;"> <img src="../../../assets/play button.png" style="height: 30px; width: 30px; " > </button>
+          <button class="button" type="button" (click)="onNext()" [disabled]="this.counter == this.images.length - 1">Next</button>
+
+      </div>
+  </div>
+  <div class="base"></div>
+</div> -->
+<!-- <div style="height:100vw ;border:solid black"></div> -->
+<div class="background" style="overflow: hidden;">
+  <div class="back">
+    <img class="Title" src="../../../assets/flappy-bird.png" width="350px">
+    <div class="Character">
+      <div class="bird-charac">
+        <button class="button1" type="button" (click)="onPrevious()" [disabled]="counter===0"></button>
+        <div [@animImageSlider]="counter" class="contain">
+          <img src="../../../assets/border.png" alt="" style="height: 90px; width: 90px;">
+          <ng-container *ngFor="let img of images; let i=index">
+            <img [src]="img" *ngIf="i===counter" class="bird">
+          </ng-container>
+        </div>
+        <button class="button2" type="button" (click)="onNext()" [disabled]="this.counter == this.images.length - 1"></button>
+      </div>
+      <img src="../../../assets/play button.png" style="height: 90px; width: 90px;" (click)="onNavigate('game')">
+    </div>
+  </div>
+  <div class="base"></div>
+</div>

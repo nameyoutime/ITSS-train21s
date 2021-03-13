@@ -1,0 +1,25 @@
+<div class="test-border">
+    <img class="img" src="{{item.picture}}">
+    <h1>{{item.name}}</h1>
+    <h1>Giá:{{item.price*1000}}đ/kg</h1>
+    <div *ngIf="item.outOfStock">
+        <h1>Hết hàng</h1>
+    </div>
+    <div *ngIf="!item.outOfStock">
+        <h1>Còn hàng</h1>
+        <div class="div">
+            <button class="button1" (click)="onClickRemove()">-</button>
+            <h1 class="h1">{{quantity}}</h1>
+            <button class="button1" (click)="onClickAdd()">+</button>
+        </div>
+        
+<!--         
+        <button class="button">
+            <h3 (click)="addToCart()">Mua ngay</h3>
+        </button> -->
+    </div>
+
+
+
+
+</div>

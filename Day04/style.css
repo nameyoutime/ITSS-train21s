@@ -1,0 +1,48 @@
+.Navi {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  .center {
+      margin-left: 40%;
+  }
+  #background{
+  
+      background-color: wheat;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .border{
+      border: grey;
+      border-style: solid
+  }
+  
+  .borderItem{
+      border: grey;
+      border-style: solid;
+      width: 20%; 
+      height: 80%;
+      text-align:center;
+      /* margin: 20%; */
+  }
+  
+  #right-content{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+  }
+  
+  .row{
+      width: 90%;
+      height: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .itemSize{
+      height: 50%;width: 50%;
+      margin:10%;
+  }
