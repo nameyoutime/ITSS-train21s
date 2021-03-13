@@ -1,0 +1,58 @@
+<style>
+    .luu {
+        color: #1a73e8;
+        border: none;
+        background: transparent;
+        padding: 10px 24px 0px 24px;
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        font-size: 20px;
+        width: 25%;
+        margin-left: 75%;
+    }
+
+    .luu:hover {
+        background-size: 150%;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+    }
+
+    .popup {
+        display: flex;
+        flex-direction: column;
+        width: 25vw;
+
+    }
+
+    .title {
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        font-size: 24px;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        border-bottom: 3px rgba(44, 44, 44, 0.32) solid;
+    }
+
+    .discript {
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        font-size: 20px;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        background: #f1f3f4;
+        overflow: auto;
+        resize: vertical;
+    }
+</style>
+
+<div class="popup">
+    <input class="title" matInput type="text" value="{{title}}" (keyup)="changeTitle(message.value)" #message><br>
+    <textarea class="discript" name="paragraph_text" cols="21" rows="10" value="{{description}}"
+        (keyup)="changeDescription(message1.value)" #message1></textarea>
+    <button class="luu" (click)='UpdateContent()'>Lưu</button>
+</div>
+
+<!-- <div >
+    <input matInput type="text" value="{{title}}"  (keyup)="changeTitle(message.value)" #message><br>
+    <textarea name="paragraph_text" cols="21" rows="10" value="{{description}}" (keyup)="changeDescription(message1.value)" #message1></textarea>
+    <button (click)='UpdateContent()' >Lưu</button>
+</div> -->

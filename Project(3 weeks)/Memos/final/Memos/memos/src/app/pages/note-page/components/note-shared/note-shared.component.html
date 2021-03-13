@@ -1,0 +1,52 @@
+<div class="item" style="float: left;">
+    <div class="item-content" [ngStyle]="{'background-color':this.shareSer.getColorById(note.id,'note')}">
+
+        <div class="noteItem unselectable">
+            <div class="cardInfo">
+
+                <div (click)="openDialogContent(note)">
+                    <div class="cardImage">
+                        <img [src]="note.imagePreview">
+                    </div>
+                    <div class="fix-line-css">
+                        <h3 class="cardTitle">{{note.title}}</h3>
+                    </div>
+                    <div class="fix-line-css">
+                        <p class="cardDescripion">{{note.description}}</p>
+                    </div>
+                </div>
+
+                <div class="cardFooter">
+                    <div class="noteMenuWrap">
+
+                        <button mat-menu-item class="myMenuItem myMenuItemRiple" type="button" mat-raised-button
+                            matTooltip="Đổi màu" mat-icon-button disableRipple=true, [matMenuTriggerFor]="colorMenu"
+                            (menuClosed)="setMenuStatus(false)" (menuOpened)="setMenuStatus(true)">
+                            <mat-icon class="material-icons-outlined">color_lens_outlined</mat-icon>
+                        </button>
+
+                        <mat-menu #colorMenu="matMenu">
+                            <div class="matMenuWrap" click-stop-propagation>
+                                <div class="colorsWrap">
+                                    <div class="colorBtn" *ngFor="let color of this.noteServcies.colors; let i = index;"
+                                        [ngStyle]="{'background-color':color}"
+                                        (click)="colorClick(i,note.id,note.shareFrom,note.shareTo)">
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-menu>
+
+                        <button id="hide" mat-menu-item class="myMenuItem myMenuItemRiple" (click)="input.click()">
+                            <input #input nv-file-select type="file"
+                            (change)="upload($event,note.id,note.shareFrom,note.shareTo)"
+                                accept="*.png.jpg" />
+                            <mat-icon>insert_photo_outlined</mat-icon>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

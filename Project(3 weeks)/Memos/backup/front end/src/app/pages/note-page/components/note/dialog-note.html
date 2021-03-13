@@ -1,0 +1,11 @@
+<style>
+    .nhap{
+        width: 100%;
+        outline: none;
+    }
+</style>
+
+<div mat-dialog-content>
+    <h2>Nhập email người muốn chia sẽ.</h2>
+    <input class="nhap" type="text" (keyup.enter)="addToShare(data,message.value)" #message>
+</div>

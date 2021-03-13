@@ -1,0 +1,49 @@
+<div class="body">
+    <div class="container">
+        <!-- <label for="show" class="close-btn fas fa-times" title="close"></label> -->
+
+        <div class="logo">
+            <img [routerLink]="['']" src="../../../assets/memos-logo.png" alt="logo">
+        </div>   
+
+        <div class="memoslogin" href="#" [routerLink]="['']">Register</div>
+        
+        <form (ngSubmit)="register()">
+
+            <div class="data">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email"
+                    required>
+            </div>
+
+            <div class="data">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" [(ngModel)]="password"
+                    placeholder="Enter Password" required>
+            </div>
+
+            <div>
+                <div class="register"> Already a member? <a routerLink="/sign-in">Sign in here</a></div>
+            </div>
+
+            <div class="form-group">
+                <p *ngIf="errorMessage.length > 0">
+                    {{errorMessage}}</p>
+    
+                <p *ngIf="error.message.length > 0">
+                    {{error.message}} </p>
+    
+                <p *ngIf="message.length > 0">
+                    {{message}} </p>
+
+            </div>
+            <div class="btn">
+                <div class="inner">
+                </div>
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

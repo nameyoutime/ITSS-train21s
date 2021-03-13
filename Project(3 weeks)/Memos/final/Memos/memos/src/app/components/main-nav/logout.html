@@ -1,0 +1,40 @@
+<style>
+    .nologout {
+        color: black;
+        border: none;
+        background: transparent;
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        padding: 8px 24px;
+        font-size: 20px;
+        outline: none;
+    }
+
+    .nologout:hover {
+        background-size: 150%;
+        transition-duration: 0.3s;
+        transform: scale(1.2);
+    }
+
+    .yeslogout {
+        color: #1a73e8;
+        border: none;
+        background: transparent;
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        padding: 8px 24px;
+        font-size: 20px;
+        outline: none;
+    }
+
+    .yeslogout:hover {
+        background-size: 150%;
+        transition-duration: 0.3s;
+        transform: scale(1.2);
+    }
+</style>
+
+<h1 mat-dialog-title>Đăng xuất khỏi tài khoản?</h1>
+
+<div mat-dialog-actions style="text-align: center;">
+    <button class="nologout" mat-button (click)="no()">No</button>
+    <button class="yeslogout" mat-button (click)="yes()">Yes</button>
+</div>

@@ -1,0 +1,23 @@
+<div class="newNote" [ngStyle]="{background:newNote.color}" [class.opened]="openTrigger">
+
+    <!-- Closed newNote element cap  !-->
+    <div class="newNoteCap" *ngIf="!openTrigger">
+        <input autofocus type="text" class="description" placeholder="Tạo ghi chú">
+    </div>
+
+    <div class="newNoteWrapper" *ngIf="openTrigger">
+        <app-note-edit-body [note]=newNote></app-note-edit-body>
+        <div class="footer">
+
+            
+            <app-note-menu [note]='newNote' [newNote]='true'></app-note-menu>
+            <!-- <button id="hide" mat-menu-item class="myMenuItem myMenuItemRiple" (click)="input.click()">
+                <input #input nv-file-select type="file" (change)="upload($event,newNote.pin)"
+                    accept="*.png.jpg" />
+                <mat-icon>insert_photo_outlined</mat-icon>
+            </button> -->
+            <a class="closeBtn">close</a>
+        </div>
+    </div>
+
+</div>

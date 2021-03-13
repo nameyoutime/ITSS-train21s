@@ -1,0 +1,349 @@
+.grid-item {
+    float: left;
+    width: 240px;
+    min-height: 100px;
+}
+
+.noteItem {
+    transition: 0.2s;
+    width: 240px;
+    min-height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+.cardBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background: white;
+    border: 1px solid #dedfe3;
+    border-radius: 10px;
+}
+
+.colorized {
+    background: yellow;
+    border: none;
+}
+
+.noticeBtn {
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.5);
+    color: #606060;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.activePin {
+    opacity: 1;
+}
+
+.noteItem:hover .noticeBtn {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.noticeBtn:hover {
+    color: #1a1a1a;
+    transition: 0.2s;
+}
+
+.cardImage {
+    margin: 8px 8px 0;
+    // transition: 00.2s;
+}
+
+.cardImage img {
+    max-width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+mat-progress-bar {
+    margin: 0;
+    height: 10px;
+}
+
+.imageLoading {
+    filter: opacity(0.4) brightness(1.2);
+}
+
+.cardInfo {
+    margin: 20px 18px 0;
+    // transition: 0.2s;
+}
+
+.cardEmptyWrap {
+    width: 100%;
+}
+
+.cardEmpty {
+    margin: 0;
+    color: #80868b;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.cardInfo .cardTitle {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+    width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: 25px;
+}
+
+.cardInfo .cardDescripion {
+    margin-top: 0;
+    font-size: 15px;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.cardList {
+    padding-left: 17px;
+}
+
+.todoItem {
+    min-height: 32px;
+    display: flex;
+    align-items: top;
+    box-sizing: border-box;
+}
+
+.todoItem span {
+    margin-left: 10px;
+    white-space: normal;
+    /*word-wrap: break-word;*/
+    overflow: hidden;
+    max-width: 80%;
+}
+
+.overlined {
+    color: #7a8085;
+    text-decoration: line-through;
+}
+
+.cardFooter {
+    // opacity: 0;
+    transition: 0.2s;
+}
+
+.noteItem:hover .cardFooter {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.noteItem .menuActive {
+    opacity: 1;
+}
+.grid {
+    position: relative;
+    // margin: 0px 52px;
+}
+.item {
+    display: block;
+    // position: absolute;
+    width: auto;
+    height: auto;
+    margin: 8px;
+    z-index: 1;
+    //
+}
+
+.item.muuri-item-hidden {
+    z-index: 0;
+}
+.item.muuri-item-releasing {
+    z-index: 2;
+}
+.item.muuri-item-dragging {
+    z-index: 3;
+}
+.item-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.13);
+    transition: 0.2s;
+}
+
+.item-content:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.13);
+    transition: 0.2s;
+}
+
+.item.muuri-item-dragging .item-content {
+    box-shadow: 0 15px 21px rgba(0, 0, 0, 0.15), 0 13px 12px rgba(0, 0, 0, 0.17);
+    transition: 0.2s;
+}
+
+.noteMenuWrap {
+    display: flex;
+    margin: 0;
+}
+
+.noteMenuWrap mat-icon {
+    font-size: 17px;
+    color: #2a2a2a;
+}
+
+.noteMenuWrap button {
+    box-shadow: none;
+    background: none;
+}
+
+.noteMenuWrap button:active {
+    box-shadow: none;
+}
+
+.matMenuTitle {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Roboto arial sans-serif;
+    margin: 6px 0 14px 20px;
+}
+
+.matMenuBody {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.dateField {
+    margin-top: 10px;
+}
+
+.timeMenuWrap {
+    padding: 7px 17px;
+}
+
+.minimalMatOption {
+    font-size: 13px;
+    color: #a4a4a4;
+    height: 34px;
+}
+
+.minimalMatOption span:nth-child(2) {
+    float: right;
+}
+
+.labelMenuWrap {
+    min-width: 218px;
+}
+
+.labelMenuItem {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transition: 00.2s;
+}
+
+.labelMenuBody {
+    padding-top: 10px;
+}
+
+.matMenuBody mat-form-field {
+    width: 100%;
+}
+
+.matMenuFooter .closeBtn {
+    font-size: 13px;
+    font-weight: 500;
+    color: #212121;
+    margin-left: auto;
+    width: 105px;
+    height: 35px !important;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.matMenuFooter .closeBtn:hover {
+    background-color: #fafafa;
+}
+
+.matMenuFooter .closeBtn:active {
+    background-color: #ececed;
+}
+
+.fileInput {
+    display: none;
+}
+
+.colorsWrap {
+    margin: 8px;
+    width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colorBtn {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 25.5px;
+    height: 25.5px;
+    margin: 2px;
+    border-radius: 50%;
+}
+
+.colorBtn:first-child {
+    border: 2px solid #ebebeb;
+}
+
+.colorBtn mat-icon {
+    font-size: 22px;
+    display: none;
+}
+
+.activeColor {
+    border: 2px solid #202020 !important;
+}
+
+.activeColor mat-icon {
+    display: block;
+}
+
+.myMenuItem {
+    width: 150px;
+    max-height: 30px !important;
+    line-height: 100%;
+    // transition: 00.2s;
+}
+
+.matMenuFooter .closeBtn {
+    margin-right: 10px;
+}
+
+//input
+#hide input[type="file"] {
+    display: none;
+}
+
+//short line
+.fix-line-css {
+    width: 100%; // chiều rộng bằng khối bao nó
+    white-space: pre-wrap;
+    overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+    text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+    -webkit-line-clamp: 2; // số dòng muốn hiển thị
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}

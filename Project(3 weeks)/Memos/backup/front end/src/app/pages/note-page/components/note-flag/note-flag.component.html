@@ -1,0 +1,62 @@
+<div class="item" style="float: left;">
+    <div class="item-content" [ngStyle]="{'background-color':this.noteServcies.getColorById(note.id,'flag',note.pin)}">
+        <div class="noteItem unselectable">
+
+            <div class="cardInfo">
+                <div style="display: flex; justify-content: flex-end;">
+                    <button style="width:auto; padding: 0 10px 0 10px;" mat-menu-item class="myMenuItemRiple"
+                        (click)="flagNote(note.id)" matTooltip="Bỏ ghim">
+                        <!-- [ngStyle]="{'background-color':this.noteServcies.getColorByNum(j+1,'flag')}" -->
+                        <mat-icon style="margin: 0px;">bookmark_remove</mat-icon>
+                    </button>
+                </div>
+
+                <div (click)="openDialogContent(note)">
+                    <div class="cardImage">
+                        <img [src]="note.imagePreview">
+                    </div>
+                    <div class="fix-line-css">
+                        <h3 class="cardTitle">{{note.title}}</h3>
+                    </div>
+                    <div class="fix-line-css">
+                        <p class="cardDescripion">{{note.description}}</p>
+                    </div>
+                    
+                </div>
+
+                <div class="cardFooter" [ngClass]="{menuActive:menuActiveTrigger}">
+                    <div class="noteMenuWrap">
+
+                        <button mat-menu-item class="myMenuItem myMenuItemRiple" type="button" mat-raised-button
+                            matTooltip="Đổi màu" mat-icon-button disableRipple=true, [matMenuTriggerFor]="colorMenu"
+                            (menuClosed)="setMenuStatus(false)" (menuOpened)="setMenuStatus(true)">
+                            <mat-icon class="material-icons-outlined">color_lens_outlined</mat-icon>
+                        </button>
+                        <mat-menu #colorMenu="matMenu">
+                            <div class="matMenuWrap" click-stop-propagation>
+                                <div class="colorsWrap">
+                                    <div class="colorBtn" *ngFor="let color of this.noteServcies.colors; let i = index;"
+                                        [ngStyle]="{'background-color':color}" (click)="colorClick(i,note.id)">
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-menu>
+
+                        <button matTooltip="Đăng hình" id="hide" mat-menu-item class="myMenuItem myMenuItemRiple" (click)="input.click()">
+                            <input #input nv-file-select type="file" (change)="upload($event,note.id,note.pin)"
+                                accept="*.png.jpg" />
+                            <mat-icon>insert_photo_outlined</mat-icon>
+                        </button>
+                        <button matTooltip="Lưu trữ" mat-menu-item class="myMenuItem myMenuItemRiple" (click)="storeNote(note.id)">
+                            <mat-icon>archive</mat-icon>
+                        </button>
+                        <button matTooltip="Xóa" mat-menu-item class="myMenuItem myMenuItemRiple" (click)="deleteNote(note.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

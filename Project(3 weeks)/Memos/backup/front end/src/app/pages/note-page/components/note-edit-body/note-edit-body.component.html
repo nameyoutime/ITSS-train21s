@@ -1,0 +1,18 @@
+<div class="editBodyWrapper">
+    <div class="image-preview" *ngIf="note.imagePreview">
+        <img class="noteImage" [ngClass]={imageLoading:fileProgress} [src]="note.imagePreview">
+    </div>
+
+    <div class="header">
+        <input type="text" class="title" placeholder="Tiêu đề" [(ngModel)]="note.title">
+    </div>
+
+    <div class="body">
+        <!-- <textarea placeholder="Tạo ghi chú" [(ngModel)]="note.description" class="description" cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1">
+        </textarea> -->
+        <textarea placeholder="Tạo ghi chú" [(ngModel)]="note.description" class="description" cdkTextareaAutosize
+            cdkAutosizeMinRows="1">
+        </textarea>
+    </div>
+</div>

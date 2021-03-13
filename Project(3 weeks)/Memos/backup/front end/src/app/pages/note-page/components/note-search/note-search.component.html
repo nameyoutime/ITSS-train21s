@@ -1,0 +1,22 @@
+<div class="item" style="float: left;">
+    <div class="item-content" [ngStyle]="{'background-color':this.noteServcies.getFilterById(note.id)}">
+        <div class="noteItem unselectable">
+            <div class="cardInfo">
+
+
+                <div class="cardImage">
+                    <img [src]="note.imagePreview">
+                </div>
+                <div class="fix-line-css">
+                    <h3 class="cardTitle">{{note.title}}</h3>
+                </div>
+                <div class="fix-line-css">
+                    <p class="cardDescripion">{{note.description}}</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

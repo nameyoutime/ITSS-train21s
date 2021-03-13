@@ -1,0 +1,12 @@
+<div class="search">
+    <button mat-button mat-icon-button aria-label="Find">
+        <mat-icon aria-label="Side nav toggle icon">search</mat-icon>
+    </button>
+
+    <input placeholder="Tìm kiếm" (keydown.enter)="check()" type="text" [(ngModel)]="value">
+    <!--  -->
+    <button mat-button mat-icon-button aria-label="Clear" (click)="clearFiltter()" (click)="value=''">
+        <mat-icon>close</mat-icon>
+    </button>
+
+</div>

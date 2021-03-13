@@ -1,0 +1,38 @@
+
+<style>
+       .huy {
+        color: black;
+        border: none;
+        background: transparent;
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        padding: 8px 24px;
+        font-size: 20px
+    }
+
+    .huy:hover {
+        background-size: 150%;
+        transition-duration: 0.3s;
+        transform: scale(1.2);
+    }
+
+    .share {
+        color: #1a73e8;
+        border: none;
+        background: transparent;
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        padding: 8px 24px;
+        font-size: 20px
+    }
+
+    .share:hover {
+        background-size: 150%;
+        transition-duration: 0.3s;
+        transform: scale(1.2);
+    }
+
+</style>
+<h1 mat-dialog-title>User không tồn tại hay email nhập không đúng!</h1>
+<!-- <div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div> -->
+<div mat-dialog-actions>
+    <button class="share" mat-button (click)="close()">Ok</button>
+</div>

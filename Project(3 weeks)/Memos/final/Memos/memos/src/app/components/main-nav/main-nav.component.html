@@ -1,0 +1,117 @@
+<!-- NAV BAR HERE! -->
+<mat-toolbar class="mytoolbar">
+    <div class="logoWrap">
+
+        <button class="sideNavBtn" type="button" aria-label="Toggle sidenav" mat-icon-button disableRipple=true
+            (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <a [routerLink]="['note-page']" class="titleName">{{routeName}}</a>
+    </div>
+
+    <app-search-bar style="margin-left: 24%;"></app-search-bar>
+
+
+    <div style="margin-left: 20%; display: flex;">
+        <!-- <div>
+            <button mat-menu-item class="myMenuItemRiple" (click)="onOpenShare()">
+                <mat-icon>folder_shared</mat-icon>
+            </button>
+        </div> -->
+        <div *ngIf="this.auth.user.photoURL==null"><img style="border-radius: 50%;margin-left: 5px;"
+                src="../../../assets/user.jpg" height="50px"></div>
+        <div *ngIf="this.auth.user.photoURL"><img style="border-radius: 50%;margin-left: 5px;"
+                src="{{this.auth.user.photoURL}}" height="50px"></div>
+
+        <mat-icon style="cursor: pointer; font-size: 35px; margin-right: 10px; margin-top: 10px; padding-left: 10px"
+            (click)="logout()">logout</mat-icon>
+    </div>
+</mat-toolbar>
+
+
+
+<!-- SIDE BAR HERE! -->
+<mat-sidenav-container class="sidenav-container" [hasBackdrop]=false [autosize]="true">
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true" fixedTopGap="70"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'push' : 'side'"
+        [opened]="!(isHandset$ | async)">
+
+        <mat-nav-list disableRipple=true>
+
+            <a mat-list-item [routerLink]="['/note-page']" routerLinkActive="is-active">
+                <mat-icon class="material-icons-outlined">emoji_objects</mat-icon>
+                <span>Ghi chú</span>
+            </a>
+
+            <!-- <a mat-list-item routerLink="/alerts" routerLinkActive="is-active">
+                <mat-icon>notifications_none</mat-icon>
+                <span>Notifications</span>
+            </a>
+
+            <mat-divider></mat-divider>
+
+            <a mat-list-item>
+
+                <mat-icon class="material-icons-outlined">edit_outlined</mat-icon>
+                <span>Edit outline</span>
+            </a>
+
+            <mat-divider></mat-divider> -->
+
+            <a mat-list-item routerLink="/archive-page" routerLinkActive="is-active">
+                <mat-icon class="material-icons-outlined">archive</mat-icon>
+                <span>Lưu trữ</span>
+            </a>
+
+            <a mat-list-item routerLink="/trash-page" routerLinkActive="is-active">
+                <mat-icon>delete_outline</mat-icon>
+                <span>Thùng rác</span>
+            </a>
+            <a mat-list-item (click)="sharedNote()" routerLinkActive="is-active">
+                <mat-icon>folder_shared</mat-icon>
+                <span>Note được chia sẻ</span>
+            </a>
+
+            <!-- share input -->
+            <form class="example-form">
+
+                <!-- <button style="margin-left: 50%;width:auto; padding: 0px;" mat-menu-item class="myMenuItemRiple"
+                    (click)="check()">
+                    <mat-icon>folder_shared</mat-icon>
+                </button> -->
+                <!-- <div *ngFor="let shared of shared">
+                </div> -->
+                <!-- <div *ngFor="let shared of shared">
+                    <button
+                        style="border:none;background-color: white;border-radius: 25px;padding: 5px;border: solid rgba(black,0.1);margin-top: 1%;margin-bottom: 1%;"
+                        (click)="getShared(shared.email)">{{shared.email}}</button>
+                </div>
+                <button style="margin-left: 50%;width:auto; padding: 0px;" mat-menu-item class="myMenuItemRiple"
+                    (click)="changeBack()">
+                    <mat-icon>settings_backup_restore</mat-icon>
+                </button> -->
+
+                <!-- <button style="margin-left: 50%;width:auto; padding: 0px;" mat-menu-item class="myMenuItemRiple"
+                    (click)="sharedNote()">
+                    <p  >Email được share</p>
+                </button> -->
+            
+
+                <div *ngFor="let shared of noteShared">
+                    <button class="tenemail" (click)="getSharedNote(shared.email)">{{shared.email}}</button>
+                </div>
+
+            </form>
+
+
+        </mat-nav-list>
+
+        <mat-sidenav-content class="menu-content">
+
+            <!-- Content -->
+
+            <div class="mat-sidenav-footer"></div>
+        </mat-sidenav-content>
+
+    </mat-sidenav>

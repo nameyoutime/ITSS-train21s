@@ -1,0 +1,63 @@
+
+
+<div class="body">
+
+    <div class="container">
+        <!-- <label for="show" class="close-btn fas fa-times" title="close"></label> -->
+
+        <div class="logo">
+            <img [routerLink]="['']" src="../../../assets/memos-logo.png" alt="logo">
+        </div>    
+
+        <div class="memoslogin" href="#" [routerLink]="['']">Login</div>
+        <form (ngSubmit)="loginByEmail()">
+
+            <div class="data">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email" required>
+            </div>
+
+            <div class="data">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password" required>
+            </div>
+
+            <div class="forgot-pass">
+                <a *ngIf="!resetPassword && isValidMailFormat(email)" class="text-danger"
+                    (click)="sendResetEmail()">Forgot Password?</a>
+                <p *ngIf="resetPassword" class="text-success">Check your email to reset password!</p>
+            </div>
+
+            <div>
+                <div class="register">  Not a member? <a routerLink="/register">Register here</a></div>
+             </div>
+
+            <div class="form-group">
+                <p *ngIf="errorMessage.length > 0" style="color: red;">
+                    {{errorMessage}}</p>
+
+                <p *ngIf="error.message.length > 0" style="color: red;">
+                    {{error.message}} </p>
+            </div>
+            
+            <div class="btn">
+                <div class="inner">
+                </div>
+                <button type="submit">Login</button>
+            </div>
+
+            <div class="or">
+                <a> OR </a>
+            </div>
+
+            <div class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                </div>
+                <a class="btn-text" (click)="login()">Login with Google</a>
+            </div>
+
+        </form>
+    </div>
+</div>

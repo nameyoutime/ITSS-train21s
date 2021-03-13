@@ -1,0 +1,60 @@
+<div class="body">
+    <app-new-note></app-new-note>
+    <div class="noNotes" *ngIf="this.noteServcies.checkNotePageIsEmpty()==true">
+
+        <mat-icon class="noNotesIco">label_outline</mat-icon>
+        <span class="noNotesText">Không có ghi chú</span>
+
+    </div>
+    
+    <div *ngIf="this.noteServcies.filter.length>0">
+        <span class="ghimvakhac">Kết quả tìm kiếm</span>
+        <div class="grid" style="display: flex;" #gridLayout>
+            <div class="item-content" style="margin-top: 2%;">
+                <div>
+                    <app-note-search [note]=note *ngFor="let note of this.noteServcies.filter"></app-note-search>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+        Pizza party
+    </button> -->
+    <div *ngIf="this.noteServcies.flag.length>0">
+        <span class="ghimvakhac">Được ghim</span>
+        <div class="grid" style="display: flex;" #gridLayout>
+            <div class="item-content" style="margin-top: 2%;">
+                <div>
+                    <app-note-flag [note]=note *ngFor="let note of noteServcies.getFlag"></app-note-flag>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="this.noteServcies.notes.length>0">
+        <span class="ghimvakhac">Khác</span>
+        <div class="grid" style="display: flex;" #gridLayout>
+            <div class="item-content" style="margin-top: 2%;">
+                <div>
+                    <app-note [note]=note *ngFor="let note of noteServcies.getNotes"></app-note>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="this.sharedSer.NoteSharedDataLength>0">
+        <span class="ghimvakhac">Được chia sẻ với tôi</span>
+        <div class="grid" style="display: flex;" #gridLayout>
+            <div class="item-content" style="margin-top: 2%;">
+                <div>
+                    <app-note-shared [note]=note *ngFor="let note of sharedSer.getNoteSharedData"></app-note-shared>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,12 @@
+
+<div class="noteMenuWrap">
+
+    
+    <button matTooltip="Đăng hình" id="hide" mat-menu-item class="myMenuItem myMenuItemRiple" (click)="fileInput.click()">
+        <!-- <input #input nv-file-select type="file" (change)="upload($event,note.id,note.pin)" accept="*.png.jpg" /> -->
+        <input type="file" class="fileInput" (change)="onFileUpload($event)" accept=".png, .jpg, .jpeg" #fileInput>
+        <mat-icon>insert_photo_outlined</mat-icon>
+    </button>
+    
+    
+</div>

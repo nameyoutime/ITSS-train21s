@@ -1,0 +1,26 @@
+<div class="body">
+    <div class="trashPage">
+        <div class="gridHeader">
+            <h3 class="gridTitle">Ghi chú trong Thùng rác sẽ bị xóa sau 7 ngày.</h3>
+            <button class="clearRef" (click)="deleteAll()">Dọn sạch thùng rác.</button>
+        </div>
+    </div>
+
+    <div class="noNotes"  *ngIf="this.noteServcies.checkTrashsPageIsEmpty()==true">
+        <mat-icon class="noNotesIco">delete_outline</mat-icon>
+        <span class="noNotesText">Thùng rác trống</span>
+    </div>
+
+    <div class="grid" #gridLayout>
+        <div>
+            <div class="item-content">
+                <div>
+                    <app-note-trash [note]=note *ngFor="let note of noteServcies.getTrash ;let j = index">
+                    </app-note-trash>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
