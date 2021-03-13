@@ -1,0 +1,29 @@
+
+
+
+
+
+<table role="grid">
+  <tr>
+    <td #cell1 id="cell1" role="gridcell" tabindex="0" (keydown)="handleKeydownOnGridcells($event, 1)" (focus)="moveContentWithFocus(1)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 1</span>
+      <div #dragObj id="dragObject" draggable="true" (dragstart)="drag($event)" (keydown)="handleKeydownOnDragObject()">
+        <span aria-hidden="true">
+          Drag Object
+        </span>
+      </div>
+    </td>
+    <td #cell2 id="cell2" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 2)" (focus)="moveContentWithFocus(2)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 2</span></td>
+    <td #cell3 id="cell3" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 3)" (focus)="moveContentWithFocus(3)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 3</span></td>
+    <td #cell4 id="cell4" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 4)" (focus)="moveContentWithFocus(4)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 4</span></td>
+  </tr>
+  <tr>
+    <td #cell5 id="cell5" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 5)" (focus)="moveContentWithFocus(5)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 5</span></td>
+    <td #cell6 id="cell6" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 6)" (focus)="moveContentWithFocus(6)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 6</span></td>
+    <td #cell7 id="cell7" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 7)" (focus)="moveContentWithFocus(7)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 7</span></td>
+    <td #cell8 id="cell8" role="gridcell" tabindex="-1" (keydown)="handleKeydownOnGridcells($event, 8)" (focus)="moveContentWithFocus(8)" (drop)="drop($event)" (dragover)="allowDrop($event)"><span aria-hidden="true">dropzone 8</span></td>
+  </tr>
+</table>
+
+<div #statusRegion role="status" class="offscreenText">
+</div>
+

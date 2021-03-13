@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div *ngFor="let component of components; index as i" (onDrop)="Drop($event,component)" pDroppable="dd" class="container">
+    <div pDraggable="dd"
+    (onDragStart)="DragStarted($event, component)"
+    (onDragEnd)="DragEnd($event,component)"
+    class="object">{{component}}</div>
+  </div>
+</div>
+              
